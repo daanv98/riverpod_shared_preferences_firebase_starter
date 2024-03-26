@@ -33,7 +33,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeProvider);
     return MaterialApp(
-      title: 'Riverpod - Shared preferences - Firebase example',
+      title: 'Riverpod - Shared preferences - Firebase starter app',
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,

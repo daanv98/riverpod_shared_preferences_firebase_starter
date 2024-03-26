@@ -91,7 +91,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
               obscureText: _hidePassword,
             ),
             const SizedBox(height: 16),
-            ElevatedButton(onPressed: _signIn, child: const Text('Log in'))
+            FilledButton(onPressed: _signIn, child: const Text('Log in'))
           ],
         ),
       ),
