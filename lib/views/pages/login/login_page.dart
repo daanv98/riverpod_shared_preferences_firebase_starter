@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_shared_preferences_firebase_starter/utils/theme_mode_extension.dart';
 
 import '../../../../providers/auth_service_provider.dart';
 import '../../../../utils/dialog_manager.dart';
-import '../../../providers/theme_provider.dart';
 
 class LoginPage extends ConsumerStatefulWidget {
   const LoginPage({super.key});
@@ -48,15 +46,9 @@ class _LoginPageState extends ConsumerState<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    final themeMode = ref.watch(themeProvider);
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            const Text('Theme mode: '),
-            TextButton(onPressed: () => ref.read(themeProvider.notifier).cycleTheme(), child: Text(themeMode.modeName)),
-          ],
-        ),
+        title: const Text('Login'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -75,23 +67,15 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                 label: const Text('Password'),
                 suffixIcon: IconButton(
                   icon: _hidePassword
-                      ? const Icon(
-                          Icons.visibility_off,
-                          // color: Colors.black,
-                          size: 18,
-                        )
-                      : const Icon(
-                          Icons.visibility,
-                          // color: Colors.black,
-                          size: 18,
-                        ),
+                      ? const Icon(Icons.visibility_off)
+                      : const Icon(Icons.visibility),
                   onPressed: _toggleHidePassword,
                 ),
               ),
               obscureText: _hidePassword,
             ),
             const SizedBox(height: 16),
-            FilledButton(onPressed: _signIn, child: const Text('Log in'))
+            FilledButton(onPressed: _signIn, child: const Text('Login'))
           ],
         ),
       ),
