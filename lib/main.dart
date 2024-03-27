@@ -5,7 +5,7 @@ import 'package:riverpod_shared_preferences_firebase_starter/providers/shared_pr
 import 'package:riverpod_shared_preferences_firebase_starter/providers/theme_provider.dart';
 import 'package:riverpod_shared_preferences_firebase_starter/utils/themes.dart';
 import 'package:riverpod_shared_preferences_firebase_starter/views/auth_wrapper.dart';
-import 'package:riverpod_shared_preferences_firebase_starter/views/pages/login/login_page.dart';
+import 'package:riverpod_shared_preferences_firebase_starter/views/pages/home/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'firebase_options.dart';
@@ -14,7 +14,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
 
-  // TODO: Obtain a valid firebase_options.dart file using the FlutterFire CLI and initialize Firebase by uncommenting the code below.
+  // TODO: Set up a Firebase project with Firebase Authentication and configure the project using the FlutterFire CLI. Afterward, initialize Firebase by uncommenting the code below.
   // await Firebase.initializeApp(
   //   options: DefaultFirebaseOptions.currentPlatform,
   // );
@@ -39,8 +39,8 @@ class MyApp extends ConsumerWidget {
       darkTheme: darkTheme,
       themeMode: themeMode,
 
-      // TODO: Replace LoginPage with AuthWrapper for initial screen
-      home: const LoginPage(),
+      // TODO: Replace HomePage with AuthWrapper for initial screen
+      home: const HomePage(),
     );
   }
 }
