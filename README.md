@@ -8,14 +8,9 @@ A starter project for a Flutter app with Firebase Authentication. Utilizes River
 - Shared Preferences to retain theme settings across sessions
 - Firebase Authentication integration
 
-## Features
-- Riverpod for state management
-- Light and dark theme support
-- Shared Preferences to retain theme settings across sessions
-- Firebase Authentication integration
-
 ## Setup
 1. Clone the repository.
-2. Run `flutter pub get` to install dependencies.
-3. Use the [Firebase CLI](https://firebase.google.com/docs/flutter/setup?platform=android) to configure Firebase for the app.
-4. Process the TODOs in the `main.dart` file.
+2. Run `flutter pub get` to install dependencies. After this step, the app can be run. For full functionality, follow the additional steps below:
+3. Configure Firebase for the app using the [Firebase CLI](https://firebase.google.com/docs/flutter/setup?platform=android).
+4. Complete the two TODOs in the `lib/main.dart` file to initialize Firebase and adjust the initial screen.
+5. Complete the two TODOs in the `lib/views/pages/home/home_page.dart` file to use Firebase Authentication in the home page.
